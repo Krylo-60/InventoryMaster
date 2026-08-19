@@ -5,7 +5,8 @@
 
   <p>
     <a href="https://modrinth.com/mod/inventorymaster"><img src="https://img.shields.io/badge/Modrinth-Available%20Now-00AF5C?style=for-the-badge&logo=modrinth" alt="Modrinth" /></a>
-    <a href="https://www.curseforge.com/projects/1659668"><img src="https://img.shields.io/badge/CurseForge-Available%20Now-F16436?style=for-the-badge&logo=curseforge" alt="CurseForge" /></a>
+    <a href="https://www.curseforge.com/projects/1659668"><img src="https://img.shields.io/badge/CurseForge%20Mod-Available%20Now-F16436?style=for-the-badge&logo=curseforge" alt="CurseForge Mod" /></a>
+    <a href="https://www.curseforge.com/projects/1659694"><img src="https://img.shields.io/badge/CurseForge%20Plugin-Available%20Now-FFA116?style=for-the-badge&logo=curseforge" alt="CurseForge Plugin" /></a>
     <a href="https://github.com/Krylo-60/InventoryMaster"><img src="https://img.shields.io/badge/GitHub-Repository-181717?style=for-the-badge&logo=github" alt="GitHub" /></a>
     <a href="https://krishivstudios.github.io"><img src="https://img.shields.io/badge/Website-Krishiv%20Studios-00f2ff?style=for-the-badge&logo=googlechrome" alt="Website" /></a>
     <a href="https://discord.gg/2hSXQKHvvX"><img src="https://img.shields.io/badge/Discord-Join%20Community-5865f2?style=for-the-badge&logo=discord" alt="Discord" /></a>
@@ -20,11 +21,11 @@
 
 ## 🎮 Compatibility & Supported Platforms
 
-| Platform / Loader | Supported Versions | Notes |
-| :--- | :---: | :--- |
-| 🟢 **Fabric & Quilt** | **1.20 – 26.2** | Full Client UI & Keybinds |
-| 🟠 **NeoForge & Forge** | **1.20 – 26.2** | Full Client UI & Keybinds |
-| 📜 **Paper, Purpur, Spigot, Folia** | **1.20 – 1.21.x** | Server Plugin (`/sort`, `/chestsort`) |
+| Platform / Loader | Supported Versions | Notes | Download |
+| :--- | :---: | :--- | :---: |
+| 🟢 **Fabric & Quilt** | **1.20 – 26.2** | Full Client UI & Keybinds | [Mod Page](https://www.curseforge.com/projects/1659668) |
+| 🟠 **NeoForge & Forge** | **1.20 – 26.2** | Full Client UI & Keybinds | [Mod Page](https://www.curseforge.com/projects/1659668) |
+| 📜 **Paper, Purpur, Spigot, Folia** | **1.20 – 26.2** | Dedicated Server Plugin (`/sort`) | [Plugin Page](https://www.curseforge.com/projects/1659694) |
 
 ---
 
