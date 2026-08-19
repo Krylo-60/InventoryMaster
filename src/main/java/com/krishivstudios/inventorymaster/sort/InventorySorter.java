@@ -14,26 +14,32 @@ public final class InventorySorter {
         MinecraftClient client = MinecraftClient.getInstance();
         if (client.player == null || client.interactionManager == null) return;
 
-        List<ItemStack> items = new ArrayList<>();
+        List<ItemStack> itemsToSort = new ArrayList<>();
+        List<Integer> unlockedIndices = new ArrayList<>();
+
         for (int i = 0; i < slotCount; i++) {
-            Slot slot = handler.getSlot(startIndex + i);
-            items.add(slot.getStack().copy());
+            int absoluteSlotIndex = startIndex + i;
+            if (!com.krishivstudios.inventorymaster.feature.SlotLockManager.isLocked(absoluteSlotIndex)) {
+                Slot slot = handler.getSlot(absoluteSlotIndex);
+                itemsToSort.add(slot.getStack().copy());
+                unlockedIndices.add(absoluteSlotIndex);
+            }
         }
 
         // 1. Merge stacks
-        for (int i = 0; i < items.size(); i++) {
-            ItemStack base = items.get(i);
+        for (int i = 0; i < itemsToSort.size(); i++) {
+            ItemStack base = itemsToSort.get(i);
             if (base.isEmpty() || base.getCount() >= base.getMaxCount()) continue;
 
-            for (int j = i + 1; j < items.size(); j++) {
-                ItemStack other = items.get(j);
+            for (int j = i + 1; j < itemsToSort.size(); j++) {
+                ItemStack other = itemsToSort.get(j);
                 if (ItemStack.areItemsAndComponentsEqual(base, other)) {
                     int space = base.getMaxCount() - base.getCount();
                     int take = Math.min(space, other.getCount());
                     base.increment(take);
                     other.decrement(take);
                     if (other.isEmpty()) {
-                        items.set(j, ItemStack.EMPTY);
+                        itemsToSort.set(j, ItemStack.EMPTY);
                     }
                     if (base.getCount() >= base.getMaxCount()) break;
                 }
@@ -41,7 +47,7 @@ public final class InventorySorter {
         }
 
         // 2. Sort items
-        items.sort((a, b) -> {
+        itemsToSort.sort((a, b) -> {
             if (a.isEmpty() && b.isEmpty()) return 0;
             if (a.isEmpty()) return 1;
             if (b.isEmpty()) return -1;
@@ -59,11 +65,11 @@ public final class InventorySorter {
             return Integer.compare(b.getCount(), a.getCount());
         });
 
-        // Apply back to slots
-        int syncId = handler.syncId;
-        for (int i = 0; i < slotCount; i++) {
-            Slot slot = handler.getSlot(startIndex + i);
-            ItemStack target = items.get(i);
+        // Apply sorted items back to unlocked slots only
+        for (int i = 0; i < unlockedIndices.size(); i++) {
+            int slotIdx = unlockedIndices.get(i);
+            Slot slot = handler.getSlot(slotIdx);
+            ItemStack target = itemsToSort.get(i);
             if (!ItemStack.areItemsAndComponentsEqual(slot.getStack(), target) || slot.getStack().getCount() != target.getCount()) {
                 slot.setStack(target);
             }

@@ -8,7 +8,7 @@ val yarnMappings = "1.21.1+build.3:v2"
 val loaderVersion = "0.16.10"
 val fabricVersion = "0.102.1+1.21.1"
 
-version = "1.0.0+1.21.1"
+version = "1.1.0+1.21.1"
 group = "com.krishivstudios"
 
 base {

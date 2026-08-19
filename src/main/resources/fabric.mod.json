@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "id": "inventorymaster",
-  "version": "${version}",
+  "version": "1.1.0",
   "name": "InventoryMaster — Ultimate Inventory QoL",
   "description": "Comprehensive 1-click inventory & chest sorting, quick stacking, auto-refill, shulker tooltip previews, and durability alerts.",
   "authors": [
