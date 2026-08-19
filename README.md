@@ -5,6 +5,7 @@
 
   <p>
     <a href="https://modrinth.com/mod/inventorymaster"><img src="https://img.shields.io/badge/Modrinth-Available%20Now-00AF5C?style=for-the-badge&logo=modrinth" alt="Modrinth" /></a>
+    <a href="https://www.curseforge.com/projects/1659668"><img src="https://img.shields.io/badge/CurseForge-Available%20Now-F16436?style=for-the-badge&logo=curseforge" alt="CurseForge" /></a>
     <a href="https://github.com/Krylo-60/InventoryMaster"><img src="https://img.shields.io/badge/GitHub-Repository-181717?style=for-the-badge&logo=github" alt="GitHub" /></a>
     <a href="https://krishivstudios.github.io"><img src="https://img.shields.io/badge/Website-Krishiv%20Studios-00f2ff?style=for-the-badge&logo=googlechrome" alt="Website" /></a>
     <a href="https://discord.gg/2hSXQKHvvX"><img src="https://img.shields.io/badge/Discord-Join%20Community-5865f2?style=for-the-badge&logo=discord" alt="Discord" /></a>
