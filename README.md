@@ -14,7 +14,18 @@
 
 ---
 
-**The ultimate 1-click inventory & chest management, quick stacking, auto-refill, and tool durability protection mod for Minecraft (1.21 – 26.2)!**
+**The ultimate 1-click inventory & chest management, quick stacking, auto-refill, and tool durability protection mod for Minecraft (1.20 – 26.2)!**
+
+---
+
+## 🎮 Compatibility & Supported Versions
+
+| Minecraft Version | Fabric & Quilt | NeoForge & Forge |
+| :--- | :---: | :---: |
+| **26.2** | ✅ Supported | 🔄 In Progress |
+| **1.21.11** | ✅ Supported | ✅ Supported |
+| **1.21.1 / 1.21** | ✅ Supported | ✅ Supported |
+| **1.20.1 / 1.20** | ✅ Supported | ✅ Supported |
 
 ---
 
