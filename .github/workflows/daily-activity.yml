@@ -1,0 +1,30 @@
+name: InventoryMaster Daily Pulse & Health
+
+on:
+  schedule:
+    # Runs automatically twice every hour (every 30 minutes)
+    - cron: '*/30 * * * *'
+  workflow_dispatch: # Allows manual trigger anytime
+
+permissions:
+  contents: write
+
+jobs:
+  daily-ping:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Update daily maintenance timestamp
+        run: |
+          mkdir -p .github
+          echo "InventoryMaster active check: $(date -u '+%Y-%m-%d %H:%M:%S UTC')" > .github/activity.log
+
+      - name: Commit and push daily activity
+        run: |
+          git config --global user.name "Krylo-60"
+          git config --global user.email "71krishivpb@gmail.com"
+          git add .github/activity.log
+          git commit -m "chore(pulse): automated repository activity sync [skip ci]" || echo "No changes to commit"
+          git push origin main
