@@ -1,0 +1,32 @@
+modLoader = "javafml"
+loaderVersion = "[4,)"
+issueTrackerURL = "https://github.com/Krylo-60/InventoryMaster/issues"
+license = "GPL-3.0"
+
+[[mods]]
+modId = "inventorymaster"
+version = "1.0.0"
+displayName = "InventoryMaster"
+authors = "Krylo_plays"
+displayURL = "https://krishivstudios.github.io"
+logoFile = "assets/inventorymaster/icon.png"
+description = '''
+The ultimate 1-click inventory & chest management, quick stacking, auto-refill, and tool durability protection mod for Minecraft!
+'''
+
+[[dependencies.inventorymaster]]
+modId = "neoforge"
+type = "required"
+versionRange = "[21.1.0,)"
+ordering = "NONE"
+side = "BOTH"
+
+[[dependencies.inventorymaster]]
+modId = "minecraft"
+type = "required"
+versionRange = "[1.21,)"
+ordering = "NONE"
+side = "BOTH"
+
+[[mixins]]
+config = "inventorymaster.mixins.json"
