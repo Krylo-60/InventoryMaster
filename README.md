@@ -1,4 +1,4 @@
-# 🎒 InventoryMaster — Ultimate Inventory QoL Mod
+# 🎒 InventoryMaster — Ultimate Inventory QoL Mod & Server Plugin
 
 <div align="center">
   <img src="assets/banner.png" alt="InventoryMaster Banner" width="100%" />
@@ -14,18 +14,17 @@
 
 ---
 
-**The ultimate 1-click inventory & chest management, quick stacking, auto-refill, and tool durability protection mod for Minecraft (1.20 – 26.2)!**
+**The ultimate 1-click inventory & chest management, quick stacking, auto-refill, and tool durability protection mod & server plugin for Minecraft (1.20 – 26.2)!**
 
 ---
 
-## 🎮 Compatibility & Supported Versions
+## 🎮 Compatibility & Supported Platforms
 
-| Minecraft Version | Fabric & Quilt | NeoForge & Forge |
-| :--- | :---: | :---: |
-| **26.2** | ✅ Supported | 🔄 In Progress |
-| **1.21.11** | ✅ Supported | ✅ Supported |
-| **1.21.1 / 1.21** | ✅ Supported | ✅ Supported |
-| **1.20.1 / 1.20** | ✅ Supported | ✅ Supported |
+| Platform / Loader | Supported Versions | Notes |
+| :--- | :---: | :--- |
+| 🟢 **Fabric & Quilt** | **1.20 – 26.2** | Full Client UI & Keybinds |
+| 🟠 **NeoForge & Forge** | **1.20 – 26.2** | Full Client UI & Keybinds |
+| 📜 **Paper, Purpur, Spigot, Folia** | **1.20 – 1.21.x** | Server Plugin (`/sort`, `/chestsort`) |
 
 ---
 
@@ -38,6 +37,7 @@
   - Click the sleek **`🔄`** button in the top-right of your inventory or container.
   - Press **`R`** key anytime.
   - **Middle-Click (Mouse Button 3)** in any empty container slot.
+  - Server command: `/sort` or `/chestsort`.
 
 ### 📥 1-Click Quick Stack / Quick Deposit
 - Inside any chest, double chest, barrel, or shulker box, click the **`📥` (Quick Stack)** button.
@@ -55,14 +55,16 @@
 
 ---
 
-## ⌨️ Controls
+## ⌨️ Controls & Commands
 
-| Keybind | Action | Description |
+| Trigger | Context | Description |
 | :--- | :--- | :--- |
-| **`R`** | **Sort Inventory / Container** | Instantly sorts items by category and merges stacks |
-| **`Middle-Click`** | **Sort Container** | Middle-click anywhere in container to sort |
-| **`🔄 Button`** | **Sort Button** | Click the UI button in top-right of container |
-| **`📥 Button`** | **Quick Stack** | Quick-deposit matching items into chest |
+| **`R`** | Client | Instantly sorts items by category and merges stacks |
+| **`Middle-Click`** | Client | Middle-click anywhere in container to sort |
+| **`🔄 Button`** | Client | Click UI button in top-right of container |
+| **`📥 Button`** | Client | Quick-deposit matching items into chest |
+| **`/sort`** | Server Plugin | Sorts player inventory via Paper command |
+| **`/chestsort`** | Server Plugin | Sorts the targeted chest or container |
 
 ---
 

@@ -8,3 +8,4 @@ pluginManagement {
 }
 
 rootProject.name = "InventoryMaster"
+include("paper")

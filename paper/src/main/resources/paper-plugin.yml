@@ -1,0 +1,19 @@
+name: InventoryMaster
+version: '1.0.0'
+main: com.krishivstudios.inventorymaster.paper.InventoryMasterPlugin
+api-version: '1.21'
+author: Krylo_plays
+website: https://krishivstudios.github.io
+description: 1-Click inventory, chest, and storage sorting plugin for Paper, Purpur, Spigot, and Folia.
+
+commands:
+  sort:
+    description: Sort your inventory or the chest you are looking at
+    aliases: [invsort, chestsort]
+    permission: inventorymaster.use
+    usage: /<command>
+
+permissions:
+  inventorymaster.use:
+    description: Allows using /sort and auto chest sorting
+    default: true
