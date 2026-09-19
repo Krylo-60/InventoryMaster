@@ -6,11 +6,11 @@ import com.krishivstudios.inventorymaster.sort.InventorySorter;
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.fabric.api.client.event.lifecycle.v1.ClientTickEvents;
 import net.fabricmc.fabric.api.client.keybinding.v1.KeyBindingHelper;
-import net.minecraft.client.MinecraftClient;
-import net.minecraft.client.gui.screen.ingame.HandledScreen;
 import net.minecraft.client.option.KeyBinding;
 import net.minecraft.client.util.InputUtil;
 import org.lwjgl.glfw.GLFW;
+
+import java.lang.reflect.Method;
 
 public final class InventoryMasterClient implements ClientModInitializer {
 
@@ -18,25 +18,43 @@ public final class InventoryMasterClient implements ClientModInitializer {
 
     @Override
     public void onInitializeClient() {
-        sortKeyBinding = KeyBindingHelper.registerKeyBinding(new KeyBinding(
-                "key.inventorymaster.sort",
-                InputUtil.Type.KEYSYM,
-                GLFW.GLFW_KEY_R,
-                "category.inventorymaster.general"
-        ));
+        try {
+            sortKeyBinding = KeyBindingHelper.registerKeyBinding(new KeyBinding(
+                    "key.inventorymaster.sort",
+                    InputUtil.Type.KEYSYM,
+                    GLFW.GLFW_KEY_R,
+                    "category.inventorymaster.general"
+            ));
 
-        ClientTickEvents.END_CLIENT_TICK.register(client -> {
-            AutoRefillHandler.onClientTick();
-            DurabilityWarningHandler.checkDurability();
+            ClientTickEvents.END_CLIENT_TICK.register(client -> {
+                try {
+                    AutoRefillHandler.onClientTick();
+                    DurabilityWarningHandler.checkDurability();
 
-            while (sortKeyBinding.wasPressed()) {
-                if (client.currentScreen instanceof HandledScreen<?> handled) {
-                    InventorySorter.sortChest(handled.getScreenHandler());
-                    InventorySorter.sortPlayerInventory(handled.getScreenHandler());
-                } else if (client.player != null) {
-                    InventorySorter.sortPlayerInventory(client.player.playerScreenHandler);
-                }
-            }
-        });
+                    while (sortKeyBinding != null && sortKeyBinding.wasPressed()) {
+                        try {
+                            if (client.currentScreen != null) {
+                                try {
+                                    Method getHandler = client.currentScreen.getClass().getMethod("getScreenHandler");
+                                    Object handler = getHandler.invoke(client.currentScreen);
+                                    if (handler instanceof net.minecraft.screen.ScreenHandler sh) {
+                                        InventorySorter.sortChest(sh);
+                                        InventorySorter.sortPlayerInventory(sh);
+                                    }
+                                } catch (Throwable t) {
+                                    if (client.player != null) {
+                                        InventorySorter.sortPlayerInventory(client.player.playerScreenHandler);
+                                    }
+                                }
+                            } else if (client.player != null) {
+                                InventorySorter.sortPlayerInventory(client.player.playerScreenHandler);
+                            }
+                        } catch (Throwable ignored) {}
+                    }
+                } catch (Throwable ignored) {}
+            });
+        } catch (Throwable t) {
+            t.printStackTrace();
+        }
     }
 }

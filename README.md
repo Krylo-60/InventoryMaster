@@ -6,7 +6,6 @@
   <p>
     <a href="https://modrinth.com/mod/inventorymaster"><img src="https://img.shields.io/badge/Modrinth-Available%20Now-00AF5C?style=for-the-badge&logo=modrinth" alt="Modrinth" /></a>
     <a href="https://www.curseforge.com/projects/1659668"><img src="https://img.shields.io/badge/CurseForge%20Mod-Available%20Now-F16436?style=for-the-badge&logo=curseforge" alt="CurseForge Mod" /></a>
-    <a href="https://www.curseforge.com/projects/1659694"><img src="https://img.shields.io/badge/CurseForge%20Plugin-Available%20Now-FFA116?style=for-the-badge&logo=curseforge" alt="CurseForge Plugin" /></a>
     <a href="https://github.com/Krylo-60/InventoryMaster"><img src="https://img.shields.io/badge/GitHub-Repository-181717?style=for-the-badge&logo=github" alt="GitHub" /></a>
     <a href="https://krishivstudios.github.io"><img src="https://img.shields.io/badge/Website-Krishiv%20Studios-00f2ff?style=for-the-badge&logo=googlechrome" alt="Website" /></a>
     <a href="https://discord.gg/2hSXQKHvvX"><img src="https://img.shields.io/badge/Discord-Join%20Community-5865f2?style=for-the-badge&logo=discord" alt="Discord" /></a>
@@ -15,7 +14,23 @@
 
 ---
 
-**The ultimate 1-click inventory & chest management, quick stacking, auto-refill, and tool durability protection mod & server plugin for Minecraft (1.20 – 26.2)!**
+**The ultimate 1-click inventory & chest management, quick stacking, auto-refill, and tool durability protection mod & server plugin for Minecraft (1.20 – 26.3 Snapshots)!**
+
+---
+
+## 🆕 What's New in 26.3 / Latest Update (v1.1.0)
+
+- **26.3 & 26.3-snapshot Support**: Native support for Minecraft 26.3 snapshot release builds.
+- **Lunar Client Support**: Works out-of-the-box on Lunar Client, Prism Launcher, and Modrinth App.
+- **Enhanced Chest Sorting**: Faster server-side and client-side container stack merging and category ordering.
+
+---
+
+## 📥 Downloads & Links
+
+- **Modrinth Downloads**: [InventoryMaster on Modrinth](https://modrinth.com/mod/inventorymaster)
+- **CurseForge Downloads**: [InventoryMaster on CurseForge](https://www.curseforge.com/projects/1659668)
+- **Source Code**: [Krylo-60 / InventoryMaster GitHub](https://github.com/Krylo-60/InventoryMaster)
 
 ---
 
@@ -23,9 +38,9 @@
 
 | Platform / Loader | Supported Versions | Notes | Download |
 | :--- | :---: | :--- | :---: |
-| 🟢 **Fabric & Quilt** | **1.20 – 26.2** | Full Client UI & Keybinds | [Mod Page](https://www.curseforge.com/projects/1659668) |
-| 🟠 **NeoForge & Forge** | **1.20 – 26.2** | Full Client UI & Keybinds | [Mod Page](https://www.curseforge.com/projects/1659668) |
-| 📜 **Paper, Purpur, Spigot, Folia** | **1.20 – 26.2** | Dedicated Server Plugin (`/sort`) | [Plugin Page](https://www.curseforge.com/projects/1659694) |
+| 🟢 **Fabric & Quilt** | **1.20 – 26.3** | Full Client UI & Keybinds | [Mod Page](https://www.curseforge.com/projects/1659668) |
+| 🟠 **NeoForge & Forge** | **1.20 – 26.3** | Full Client UI & Keybinds | [Mod Page](https://www.curseforge.com/projects/1659668) |
+| 📜 **Paper, Purpur, Spigot, Folia** | **1.20 – 26.3** | Dedicated Server Plugin (`/sort`) | [Plugin Page](https://www.curseforge.com/projects/1659668) |
 
 ---
 
@@ -52,7 +67,7 @@
 - Automatically equips a new **Totem of Undying** to your off-hand slot when popped in combat.
 
 ### ⚠️ Low Durability Critical Warning Alert
-- Plays a warning chime and displays a red HUD toast alert when your active tool or Elytra reaches critical health ($\le 10\%$ durability or $\le 15$ hits left) so you never accidentally break valuable gear!
+- Plays a warning chime and displays a red HUD toast alert when your active tool or Elytra reaches critical health (≤10% durability or ≤15 hits left) so you never accidentally break valuable gear!
 
 ---
 
